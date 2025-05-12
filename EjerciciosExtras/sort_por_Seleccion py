@@ -1,0 +1,23 @@
+
+miLista=[9,1,8,2,7,3,6,4,5]
+
+longitud= len(miLista)
+
+#bucle para determinar la primera posicion 
+for i in range(longitud):
+    
+    menor= i 
+    #bucle para comparar con las demas posiciones 
+    for j in range(i+1,longitud):
+        
+        if miLista[j]<miLista[menor]:
+            menor = j
+            
+    #remplaza los valores designados
+    temporal= miLista[menor]
+    miLista[menor] = miLista[i]
+    miLista[i]= temporal
+        
+print(miLista)
+
+
